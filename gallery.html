@@ -1,0 +1,1507 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Explore our school gallery featuring campus life, classrooms, events, sports, activities and memorable moments.">
+
+    <meta name="keywords"
+          content="school gallery, school photos, campus, students, school events, sports">
+
+    <meta name="author"
+          content="School Management">
+
+    <title>Gallery | Our School</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="style.css">
+          <style>
+        /* Equal-size responsive gallery grid */
+        .advanced-gallery {
+            display: grid !important;
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            gap: 24px !important;
+            align-items: stretch;
+        }
+
+        .advanced-gallery .gallery-box,
+        .advanced-gallery .gallery-featured,
+        .advanced-gallery .gallery-wide,
+        .advanced-gallery .gallery-tall {
+            width: 100% !important;
+            height: auto !important;
+            min-height: 0 !important;
+            max-height: none !important;
+            grid-column: auto !important;
+            grid-row: auto !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .advanced-gallery .gallery-box > img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            display: block;
+        }
+
+        .advanced-gallery .gallery-box-overlay {
+            position: absolute;
+            inset: 0;
+        }
+
+        @media (max-width: 991px) {
+            .advanced-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .advanced-gallery {
+                grid-template-columns: 1fr !important;
+                gap: 18px !important;
+            }
+
+            .advanced-gallery .gallery-box,
+            .advanced-gallery .gallery-featured,
+            .advanced-gallery .gallery-wide,
+            .advanced-gallery .gallery-tall {
+                height: 240px !important;
+                min-height: 240px !important;
+                max-height: 240px !important;
+            }
+        }
+
+        /* =====================================================
+           GALLERY IMAGE DESCRIPTION BELOW IMAGE
+        ====================================================== */
+        .advanced-gallery .gallery-box,
+        .advanced-gallery .gallery-featured,
+        .advanced-gallery .gallery-wide,
+        .advanced-gallery .gallery-tall {
+            display: flex !important;
+            flex-direction: column !important;
+            height: auto !important;
+            min-height: 0 !important;
+            max-height: none !important;
+            overflow: hidden !important;
+            background: #fff;
+            border-radius: 16px;
+        }
+
+        .advanced-gallery .gallery-box > img {
+            width: 100% !important;
+            height: 280px !important;
+            min-height: 280px !important;
+            max-height: 280px !important;
+            object-fit: cover !important;
+            display: block !important;
+            flex-shrink: 0;
+        }
+
+        /* Move the text area below the image */
+        .advanced-gallery .gallery-box-overlay {
+            position: static !important;
+            inset: auto !important;
+            display: block !important;
+            background: #fff !important;
+            color: inherit !important;
+            padding: 18px 18px 20px !important;
+            flex: 1;
+        }
+
+        .advanced-gallery .gallery-box-content {
+            position: static !important;
+            transform: none !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .advanced-gallery .gallery-box-content h3 {
+            margin: 0 0 7px !important;
+            font-size: 19px;
+            line-height: 1.3;
+        }
+
+        .advanced-gallery .gallery-box-content p {
+            margin: 0 !important;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .advanced-gallery .gallery-category {
+            position: static !important;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        /* Keep the expand button neatly at the bottom-right */
+        .advanced-gallery .gallery-open {
+            position: absolute !important;
+            right: 14px;
+            bottom: 14px;
+            z-index: 3;
+        }
+
+        @media (max-width: 600px) {
+            .advanced-gallery .gallery-box > img {
+                height: 240px !important;
+                min-height: 240px !important;
+                max-height: 240px !important;
+            }
+        }
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         PAGE LOADER
+    ====================================================== -->
+
+    <div class="page-loader">
+
+        <div class="loader-content">
+
+            <div class="loader-logo">
+
+                <!-- LOGO SPACE -->
+
+                <img src="images/logo.png"
+                     alt="School Logo"
+                     onerror="this.style.display='none';">
+
+            </div>
+
+            <div class="loader-spinner"></div>
+
+            <p>
+                Loading...
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SCROLL PROGRESS
+    ====================================================== -->
+
+    <div class="scroll-progress"></div>
+
+
+
+    <!-- =====================================================
+         HEADER
+         Automatically loaded from script.js
+    ====================================================== -->
+
+    <div id="site-header"></div>
+
+
+
+    <!-- =====================================================
+         GALLERY HERO
+    ====================================================== -->
+
+    <section class="inner-page-hero gallery-hero">
+
+
+        <!-- Decorative shapes -->
+
+        <div class="inner-hero-shape shape-one"></div>
+
+        <div class="inner-hero-shape shape-two"></div>
+
+        <div class="inner-hero-shape shape-three"></div>
+
+
+        <div class="container">
+
+
+            <div class="inner-hero-content reveal">
+
+
+                <span class="breadcrumb-label">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Home
+
+                    <i class="fa-solid fa-angle-right"></i>
+
+                    Gallery
+
+                </span>
+
+
+                <h1>
+
+                    Moments That
+
+                    <span>
+                        Tell Our Story
+                    </span>
+
+                </h1>
+
+
+                <p>
+                    Take a visual journey through our classrooms,
+                    campus, celebrations, activities and everyday
+                    moments of school life.
+                </p>
+
+
+                <a href="#school-gallery"
+                   class="btn btn-light">
+
+                    Explore Gallery
+
+                    <i class="fa-solid fa-arrow-down"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-bottom-wave"></div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =====================================================
+             GALLERY INTRODUCTION
+        ====================================================== -->
+
+        <section class="section gallery-introduction">
+
+            <div class="container">
+
+
+                <div class="gallery-intro-grid">
+
+
+                    <!-- Content -->
+
+                    <div class="gallery-intro-content reveal">
+
+
+                        <span class="section-label">
+
+                            <i class="fa-solid fa-images"></i>
+
+                            School Life
+
+                        </span>
+
+
+                        <h2>
+
+                            Every Picture Holds
+
+                            <span>
+                                A Memory
+                            </span>
+
+                        </h2>
+
+
+                        <p>
+                            From the excitement of the first day
+                            to the joy of competitions, celebrations,
+                            classroom activities and achievements,
+                            every moment contributes to our school
+                            story.
+                        </p>
+
+
+                        <p>
+                            Explore the gallery and discover the
+                            vibrant experiences that make our school
+                            community special.
+                        </p>
+
+
+                        <div class="gallery-stats">
+
+
+                            <div class="gallery-stat">
+
+                                <strong>
+                                    100+
+                                </strong>
+
+                                <span>
+                                    Memories
+                                </span>
+
+                            </div>
+
+
+                            <div class="gallery-stat">
+
+                                <strong>
+                                    20+
+                                </strong>
+
+                                <span>
+                                    Events
+                                </span>
+
+                            </div>
+
+
+                            <div class="gallery-stat">
+
+                                <strong>
+                                    01
+                                </strong>
+
+                                <span>
+                                    Community
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Decorative visual -->
+
+                    
+
+                        <!-- <div class="gallery-polaroid polaroid-three">
+
+                            <img src="image/annual function.avif"
+                                 alt="School Event"
+                                 onerror="this.src='https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=700&q=85';">
+
+                            <span>
+                                Celebration
+                            </span>
+
+                        </div> -->
+
+
+                        <div class="gallery-doodle">
+
+                            <i class="fa-solid fa-camera"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             GALLERY
+        ====================================================== -->
+
+        <section class="section school-gallery-section"
+                 id="school-gallery">
+
+            <div class="container">
+
+
+                <!-- Section Heading -->
+
+                <div class="section-heading center reveal">
+
+
+                    <span class="section-label">
+
+                        Visual Journey
+
+                    </span>
+
+
+                    <h2>
+
+                        Explore Our
+
+                        <span>
+                            Gallery
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+                        Browse through different aspects of
+                        our school life.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     FILTER BUTTONS
+                ================================================== -->
+
+                <!-- <div class="gallery-filters reveal">
+
+
+                    <button class="gallery-filter active"
+                            data-filter="all">
+
+                        All
+
+                    </button> -->
+
+
+                    <!-- <button class="gallery-filter"
+                            data-filter="campus">
+
+                        Campus
+
+                    </button>
+
+
+                    <button class="gallery-filter"
+                            data-filter="academics">
+
+                        Academics
+
+                    </button>
+
+
+                    <button class="gallery-filter"
+                            data-filter="events">
+
+                        Events
+
+                    </button>
+
+
+                    <button class="gallery-filter"
+                            data-filter="sports">
+
+                        Sports
+
+                    </button>
+
+
+                    <button class="gallery-filter"
+                            data-filter="activities">
+
+                        Activities
+
+                    </button> -->
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     GALLERY GRID
+                ================================================== -->
+
+                <div class="advanced-gallery"
+                     id="galleryGrid">
+
+
+                    <!-- =================================================
+                         IMAGE 01
+                    ================================================== -->
+
+                    <div class="gallery-box gallery-featured reveal"
+                         data-category="campus"
+                         data-index="0"
+                         data-title="Our School Campus"
+                         data-description="A vibrant and welcoming campus designed to support learning and growth."
+                         data-image="images/gallery1.jpg">
+
+                        <img src="image/school 2.jpg"
+                             alt="School Campus"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=85';">
+
+
+                        <div class="gallery-box-overlay">
+
+
+                            <!-- <div class="gallery-category">
+                                Campus
+                            </div> -->
+
+
+                            <div class="gallery-box-content">
+
+                                <h3>
+                                    Our School Campus
+                                </h3>
+
+                                <p>
+                                    Explore our learning environment.
+                                </p>
+
+                            </div>
+
+
+                            <button class="gallery-open"
+                                    aria-label="Open image">
+
+                                <i class="fa-solid fa-expand"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         IMAGE 02
+                    ================================================== -->
+
+                    <div class="gallery-box reveal"
+                         data-category="academics"
+                         data-index="1"
+                         data-title="Interactive Classroom"
+                         data-description="Engaging classroom experiences encourage curiosity and active participation."
+                         data-image="images/gallery2.jpg">
+
+                        <img src="image/class roon.jpg"
+                             alt="Interactive Classroom"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85';">
+
+
+                        <div class="gallery-box-overlay">
+
+
+                            <div class="gallery-category">
+                                Academics
+                            </div>
+
+
+                            <div class="gallery-box-content">
+
+                                <h3>
+                                    Interactive Classroom
+                                </h3>
+
+                                <p>
+                                    Learning through participation.
+                                </p>
+
+                            </div>
+
+
+                            <button class="gallery-open"
+                                    aria-label="Open image">
+
+                                <i class="fa-solid fa-expand"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         IMAGE 03
+                    ================================================== -->
+
+                    <!-- <div class="gallery-box reveal"
+                         data-category="events"
+                         data-index="2"
+                         data-title="School Celebration"
+                         data-description="Celebrations bring our school community together."
+                         data-image="images/gallery3.jpg">
+
+                        <img src="images/gallery3.jpg"
+                             alt="School Celebration"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1000&q=85';">
+
+
+                        <div class="gallery-box-overlay">
+
+
+                            <div class="gallery-category">
+                                Events
+                            </div>
+
+
+                            <div class="gallery-box-content">
+
+                                <h3>
+                                    School Celebration
+                                </h3>
+
+                                <p>
+                                    Celebrating together.
+                                </p>
+
+                            </div>
+
+
+                            <button class="gallery-open"
+                                    aria-label="Open image">
+
+                                <i class="fa-solid fa-expand"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div> -->
+
+
+
+                    <!-- =================================================
+                         IMAGE 04
+                    ================================================== -->
+
+                    <div class="gallery-box reveal"
+                         data-category="sports"
+                         data-index="3"
+                         data-title="Sports Activities"
+                         data-description="Sports encourage teamwork, discipline, fitness and confidence."
+                         data-image="images/gallery4.jpg">
+
+                        <img src="image/sports complex.jpg"
+                             alt="Sports Activities"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1000&q=85';">
+
+
+                        <div class="gallery-box-overlay">
+
+
+                            <div class="gallery-category">
+                                Sports
+                            </div>
+
+
+                            <div class="gallery-box-content">
+
+                                <h3>
+                                    Sports Activities
+                                </h3>
+
+                                <p>
+                                    Play, compete and grow.
+                                </p>
+
+                            </div>
+
+
+                            <button class="gallery-open"
+                                    aria-label="Open image">
+
+                                <i class="fa-solid fa-expand"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         IMAGE 05
+                    ================================================== -->
+
+                    <div class="gallery-box reveal"
+                         data-category="activities"
+                         data-index="4"
+                         data-title="Creative Activities"
+                         data-description="Students explore creativity through art, crafts and hands-on activities."
+                         data-image="image/">
+
+                        <img src="image/annual function.avif"
+                             alt="Creative Activities"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1000&q=85';">
+
+
+                        <div class="gallery-box-overlay">
+
+
+                            <div class="gallery-category">
+                                Activities
+                            </div>
+
+
+                            <div class="gallery-box-content">
+
+                                <h3>
+                                    Creative Activities
+                                </h3>
+
+                                <p>
+                                    Creativity has no limits.
+                                </p>
+
+                            </div>
+
+
+                            <button class="gallery-open"
+                                    aria-label="Open image">
+
+                                <i class="fa-solid fa-expand"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         IMAGE 06
+                    ================================================== -->
+
+                    <div class="gallery-box gallery-wide reveal"
+                         data-category="campus"
+                         data-index="5"
+                         data-title="School Library"
+                         data-description="A peaceful space where students can read, research and discover."
+                         data-image="images/library.jpg">
+
+                        <img src="image/library.webp"
+                             alt="School Library"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=85';">
+
+
+                        <div class="gallery-box-overlay">
+
+
+                            <div class="gallery-category">
+                                Campus
+                            </div>
+
+
+                            <div class="gallery-box-content">
+
+                                <h3>
+                                    School Library
+                                </h3>
+
+                                <p>
+                                    A world of knowledge.
+                                </p>
+
+                            </div>
+
+
+                            <button class="gallery-open"
+                                    aria-label="Open image">
+
+                                <i class="fa-solid fa-expand"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         IMAGE 07
+                    ================================================== -->
+
+                    <div class="gallery-box reveal"
+                         data-category="academics"
+                         data-index="6"
+                         data-title="Science Laboratory"
+                         data-description="Practical experimentation helps students understand concepts through experience."
+                         data-image="images/laboratory.jpg">
+
+                        <img src="image/Science students in the lab.png"
+                             alt="Science Laboratory"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1000&q=85';">
+
+
+                        <div class="gallery-box-overlay">
+
+
+                            <div class="gallery-category">
+                                Academics
+                            </div>
+
+
+                            <div class="gallery-box-content">
+
+                                <h3>
+                                    Science Laboratory
+                                </h3>
+
+                                <p>
+                                    Discover through experimentation.
+                                </p>
+
+                            </div>
+
+
+                            <button class="gallery-open"
+                                    aria-label="Open image">
+
+                                <i class="fa-solid fa-expand"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         IMAGE 08
+                    ================================================== -->
+
+                    <div class="gallery-box reveal"
+                         data-category="events"
+                         data-index="7"
+                         data-title="Annual Celebration"
+                         data-description="School events provide opportunities for students to showcase their talents."
+                         data-image="images/event.jpg">
+
+                        <img src="image/annual function.avif"
+                             alt="Annual Celebration"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1000&q=85';">
+
+
+                        <div class="gallery-box-overlay">
+
+
+                            <div class="gallery-category">
+                                Events
+                            </div>
+
+
+                            <div class="gallery-box-content">
+
+                                <h3>
+                                    Annual Celebration
+                                </h3>
+
+                                <p>
+                                    Moments of joy and achievement.
+                                </p>
+
+                            </div>
+
+
+                            <button class="gallery-open"
+                                    aria-label="Open image">
+
+                                <i class="fa-solid fa-expand"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         IMAGE 09
+                    ================================================== -->
+
+                    <div class="gallery-box reveal"
+                         data-category="sports"
+                         data-index="8"
+                         data-title="Outdoor Games"
+                         data-description="Outdoor activities help students develop physical fitness and teamwork."
+                         data-image="images/sports2.jpg">
+
+                        <img src="image/sports.avif"
+                             alt="Outdoor Games"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1000&q=85';">
+
+
+                        <div class="gallery-box-overlay">
+
+
+                            <div class="gallery-category">
+                                Sports
+                            </div>
+
+
+                            <div class="gallery-box-content">
+
+                                <h3>
+                                    Outdoor Games
+                                </h3>
+
+                                <p>
+                                    Fitness, teamwork and discipline.
+                                </p>
+
+                            </div>
+
+
+                            <button class="gallery-open"
+                                    aria-label="Open image">
+
+                                <i class="fa-solid fa-expand"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         IMAGE 10
+                    ================================================== -->
+<!-- 
+                    <div class="gallery-box gallery-tall reveal"
+                         data-category="activities"
+                         data-index="9"
+                         data-title="Art & Creativity"
+                         data-description="Art provides students with a powerful way to express ideas and emotions."
+                         data-image="images/art2.jpg">
+
+                        <img src="images/art2.jpg"
+                             alt="Art Activity"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1000&q=85';">
+
+
+                        <div class="gallery-box-overlay">
+
+
+                            <div class="gallery-category">
+                                Activities
+                            </div>
+
+
+                            <div class="gallery-box-content">
+
+                                <h3>
+                                    Art & Creativity
+                                </h3>
+
+                                <p>
+                                    Express. Imagine. Create.
+                                </p>
+
+                            </div>
+
+
+                            <button class="gallery-open"
+                                    aria-label="Open image">
+
+                                <i class="fa-solid fa-expand"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div> -->
+
+
+
+                    <!-- =================================================
+                         IMAGE 11
+                    ================================================== -->
+
+                    <div class="gallery-box reveal"
+                         data-category="academics"
+                         data-index="10"
+                         data-title="Digital Learning"
+                         data-description="Technology-supported learning helps students build digital confidence."
+                         data-image="image/smart class room.jpg">
+
+                        <img src="image/smart class room.jpg"
+                             alt="Digital Learning"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85';">
+
+
+                        <div class="gallery-box-overlay">
+
+
+                            <div class="gallery-category">
+                                Academics
+                            </div>
+
+
+                            <div class="gallery-box-content">
+
+                                <h3>
+                                    Digital Learning
+                                </h3>
+
+                                <p>
+                                    Technology meets education.
+                                </p>
+
+                            </div>
+
+
+                            <button class="gallery-open"
+                                    aria-label="Open image">
+
+                                <i class="fa-solid fa-expand"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         IMAGE 12
+                    ================================================== -->
+
+                    <!-- <div class="gallery-box reveal"
+                         data-category="campus"
+                         data-index="11"
+                         data-title="Learning Spaces"
+                         data-description="Purposeful spaces create a positive environment for learning and collaboration."
+                         data-image="images/campus2.jpg">
+
+                        <img src="images/campus2.jpg"
+                             alt="Learning Spaces"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1000&q=85';">
+
+
+                        <div class="gallery-box-overlay">
+
+
+                            <div class="gallery-category">
+                                Campus
+                            </div>
+
+
+                            <div class="gallery-box-content">
+
+                                <h3>
+                                    Learning Spaces
+                                </h3>
+
+                                <p>
+                                    Spaces designed for growth.
+                                </p>
+
+                            </div>
+ -->
+
+                            <!-- <button class="gallery-open"
+                                    aria-label="Open image">
+
+                                <i class="fa-solid fa-expand"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                 Gallery Note 
+
+                <div class="gallery-note reveal">
+
+                    <i class="fa-solid fa-camera-retro"></i>
+
+                    <p>
+                        More photographs and school events can
+                        be added to this gallery as the school
+                        calendar progresses.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+     =====================================================
+             FEATURED MOMENT
+        ====================================================== 
+
+       
+
+                    <div class="featured-gallery-content">
+
+
+                        <span class="section-label">
+
+                            School Memories
+
+                        </span>
+
+
+                        <h2>
+
+                            Celebrating Every
+
+                            <span>
+                                Achievement
+                            </span>
+
+                        </h2>
+
+
+                        <p>
+                            From academic accomplishments to cultural
+                            celebrations and sporting achievements,
+                            we believe every student effort deserves
+                            to be recognised and celebrated.
+                        </p>
+
+
+                        <a href="about.html"
+                           class="text-link">
+
+                            Learn More About Our School
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        =====================================================
+             GALLERY CTA
+        ====================================================== 
+
+        <section class="section gallery-cta-section">
+
+            <div class="container">
+
+
+                <div class="gallery-cta-box reveal">
+
+
+                    <div class="gallery-cta-decoration">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="gallery-cta-content">
+
+
+                        <span class="section-label light">
+
+                            More Than Pictures
+
+                        </span>
+
+
+                        <h2>
+
+                            Come Experience
+
+                            <span>
+                                School Life
+                            </span>
+
+                        </h2>
+
+
+                        <p>
+                            Pictures show a glimpse. Visit our campus
+                            to experience our learning environment,
+                            facilities and community firsthand.
+                        </p> -->
+
+
+                        <!-- <div class="cta-buttons">
+
+
+                            <a href="facilities.html"
+                               class="btn btn-light"> -->
+
+                                Explore Facilities
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+
+                            <a href="contact.html"
+                               class="btn btn-transparent">
+
+                                Visit Us
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         ADVANCED LIGHTBOX
+    ====================================================== 
+
+     <div class="gallery-lightbox"
+         id="galleryLightbox"
+         aria-hidden="true">
+
+
+        Background 
+
+        <div class="lightbox-backdrop"></div>
+
+
+        Close 
+
+        <button class="lightbox-close"
+                id="galleryLightboxClose"
+                aria-label="Close gallery">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        Previous
+
+        <button class="lightbox-navigation lightbox-prev"
+                id="galleryPrev"
+                aria-label="Previous image">
+
+            <i class="fa-solid fa-chevron-left"></i>
+
+        </button> -->
+
+
+        <!-- Main content -->
+
+        <!-- <div class="lightbox-content">
+
+
+            <div class="lightbox-image-container">
+
+                <img id="galleryLightboxImage"
+                     src=""
+                     alt="Gallery image">
+
+            </div>
+
+
+            <div class="lightbox-information">
+
+
+                <div>
+
+                    <span id="lightboxCategory">
+                        Campus
+                    </span>
+
+
+                    <h3 id="lightboxTitle">
+                        School Gallery
+                    </h3>
+
+
+                    <p id="lightboxDescription">
+                        School memory.
+                    </p>
+
+                </div>
+
+
+                <div class="lightbox-counter">
+
+                    <strong id="lightboxCurrent">
+                        01
+                    </strong>
+
+                    <span>
+                        /
+                    </span>
+
+                    <span id="lightboxTotal">
+                        12
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div> -->
+
+
+        <!-- Next -->
+
+        <!-- <button class="lightbox-navigation lightbox-next"
+                id="galleryNext"
+                aria-label="Next image">
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </button>
+
+
+        Bottom controls 
+
+        <div class="lightbox-controls">
+
+
+            <button id="lightboxZoom"
+                    aria-label="Zoom image">
+
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+
+                Zoom
+
+            </button>
+
+
+            <button id="lightboxDownload"
+                    aria-label="Open image">
+
+                <i class="fa-solid fa-up-right-from-square"></i>
+
+                Open Image
+
+            </button>
+
+        </div>
+
+    </div> -->
+
+
+
+    <!-- =====================================================
+         FOOTER
+         Automatically loaded from script.js
+    ====================================================== -->
+
+     <div id="site-footer"></div>
+
+
+
+    - =====================================================
+         BACK TO TOP
+    ====================================================== 
+
+    <!-- <button id="backToTop"
+            class="back-to-top"
+            aria-label="Back to top">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>  -->
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
