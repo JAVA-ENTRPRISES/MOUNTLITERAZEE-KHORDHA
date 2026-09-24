@@ -253,7 +253,7 @@ function renderFooter(target) {
                         >
 
                             <img
-                                src="image/logo.jpeg"
+                                src="image/LOGO (2).jpeg"
                                 class="school-logo footer-logo-image"
                                 alt="Mount Litera Zee School, Raghunathpur, Bhubaneswar"
                                 style="width:260px;height:auto;display:block;object-fit:contain;"
