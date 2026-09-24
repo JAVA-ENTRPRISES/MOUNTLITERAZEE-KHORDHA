@@ -1,42 +1,4 @@
 
-LOGO (2).jpeg
-
-Pasted text(3).txt
-Document
-in this code put the logo so that it will reflect on the website header and footer 
-
-Yes. I’ve updated your code so the actual Mount Litera Zee School logo appears in both the header and footer.
-
-Changes made
-Added the uploaded logo to the header.
-
-Added the same logo to the footer.
-
-Removed the duplicate school-name text because the logo already contains the school name and tagline.
-
-Used a simple image/logo.jpeg path for reliable loading.
-
-Header logo width: 220px
-
-Footer logo width: 260px
-
-Your original code already had logo placeholders in both areas, but it referenced image/LOGO(2).jpeg, while the uploaded file is LOGO (2).jpeg. I corrected this and packaged the required files. 
-
-
-Download the updated package:
-Mount Litera Logo Update – ZIP
-
-Inside the ZIP:
-
-script.js
-image/
-   logo.jpeg
-Place the image folder in the same location as your HTML files, and use the updated script.js. 
-
-Create richer images from your files
-Upgrade to transform your uploaded files and images with more precision, consistency, and detail using increased reasoning.
-
-Claim special offer
 
 
 /* =========================================================
