@@ -157,12 +157,12 @@ function renderHeader(target) {
                 >
 
                     <img
-                        src="image/LOGO(2).jpeg"
-                        alt="School Logo"
+                        src="image/logo.jpeg"
+                        class="school-logo header-logo"
+                        alt="Mount Litera Zee School, Raghunathpur, Bhubaneswar"
+                        style="width:220px;height:auto;display:block;object-fit:contain;"
                         onerror="this.style.display='none';"
                     >
-
-                    <span>MOUNT LITERA ZEE SCHOOL</span>
 
                 </a>
 
@@ -253,11 +253,12 @@ function renderFooter(target) {
                         >
 
                             <img
-                                src="image/LOGO(2).jpeg"
-                                alt="School Logo"
+                                src="image/logo.jpeg"
+                                class="school-logo footer-logo-image"
+                                alt="Mount Litera Zee School, Raghunathpur, Bhubaneswar"
+                                style="width:260px;height:auto;display:block;object-fit:contain;"
                                 onerror="this.style.display='none';"
                             >
-                             <span><strong>MOUNT LITERA ZEE SCHOOL</strong></span>
 
 
                         </a>
