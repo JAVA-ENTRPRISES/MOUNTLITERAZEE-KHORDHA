@@ -157,7 +157,7 @@ function renderHeader(target) {
                 >
 
                     <img
-                        src="image/logo.jpeg"
+                        src="image/LOGO(2).jpeg"
                         class="school-logo header-logo"
                         alt="Mount Litera Zee School, Raghunathpur, Bhubaneswar"
                         style="width:220px;height:auto;display:block;object-fit:contain;"
