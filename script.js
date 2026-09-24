@@ -157,7 +157,7 @@ function renderHeader(target) {
                 >
 
                     <img
-                        src="images/logo.png"
+                        src="image/LOGO(2).jpeg"
                         alt="School Logo"
                         onerror="this.style.display='none';"
                     >
@@ -253,7 +253,7 @@ function renderFooter(target) {
                         >
 
                             <img
-                                src="images/logo.png"
+                                src="image/LOGO(2).jpeg"
                                 alt="School Logo"
                                 onerror="this.style.display='none';"
                             >
